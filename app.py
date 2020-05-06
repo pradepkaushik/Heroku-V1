@@ -18,7 +18,7 @@ def predict():
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
 
-    output = round(prediction[0], 2)
+    output = np.round(prediction[0], 2)
 
     return render_template('indexf.html', prediction_text='Total Tax should be $ {}'.format(output))
 
